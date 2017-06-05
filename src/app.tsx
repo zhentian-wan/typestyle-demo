@@ -1,4 +1,4 @@
-import { style } from 'typestyle';
+import { style, media } from 'typestyle';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
@@ -11,8 +11,10 @@ const fontSize = (value: number | string) => {
     }
 };
 const className = style(
-    fontSize('3em'),
-    {color: 'red'}
+    {color: 'red', transition: 'font-size 0.2s'},
+    media({maxWidth: 700, minWidth: 500}, fontSize(20)),
+    media({minWidth: 701}, fontSize(30)),
+    media({maxWidth: 499}, fontSize(15))
 );
 
 ReactDOM.render(
