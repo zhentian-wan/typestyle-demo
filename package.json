@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --host 0.0.0.0  --port 5555 --hot --inline --no-info --content-base ./public"
+    "start": "webpack-dev-server --host 0.0.0.0  --port 3000 --hot --inline --no-info --content-base ./public"
   },
   "keywords": [],
   "author": "",
