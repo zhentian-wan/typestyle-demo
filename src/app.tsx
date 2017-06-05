@@ -15,11 +15,12 @@ const className = style(
         color: 'red',
         transition: 'font-size 0.2s',
         $nest: {
-            '&:focus': {backgroundColor: 'green'},
-            '&:hover': fontSize(50),
-            /** iphone */
-            '@media screen and (-webkit-min-device-pixel-ratio: 2)': {
-                backgroundColor: 'blue'
+            '&::after': {
+                content: `' Type after'`
+            },
+            '&::selection': {
+                backgroundColor: 'black',
+                color: 'gold'
             }
         }
     },
@@ -29,8 +30,8 @@ const className = style(
 );
 
 ReactDOM.render(
-    <button className={className}>
+    <div className={className}>
         Hello Typestyle
-    </button>,
+    </div>,
     document.getElementById('root')
 );
