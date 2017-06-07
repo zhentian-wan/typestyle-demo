@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "precommit": "lint-staged",
     "start": "webpack-dev-server --host 0.0.0.0  --port 3000 --hot --inline --no-info --content-base ./public"
+  },
+  "lint-staged": {
+    "*.tsx": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -19,6 +26,9 @@
     "typestyle": "1.2.0"
   },
   "devDependencies": {
+    "husky": "0.13.4",
+    "lint-staged": "3.6.0",
+    "prettier": "1.4.2",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
   }
