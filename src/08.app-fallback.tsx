@@ -11,22 +11,22 @@ cssRaw(`
 `);
 
 const scroll: types.NestedCSSProperties = {
-  "-webkit-overflow-scrolling": "touch",
-  overflow: "auto"
+    "-webkit-overflow-scrolling": "touch",
+    overflow: "auto"
 };
 
 const bg = style(scroll, {
-  backgroundColor: [
-    /* The fallback */
-    "rgb(200, 54, 54)",
-    /** Graceful upgrade */
-    "rgba(200, 54, 54, 0.5)"
-  ]
+    backgroundColor: [
+        /* The fallback */
+        "rgb(200, 54, 54)",
+        /** Graceful upgrade */
+        "rgba(200, 54, 54, 0.5)"
+    ]
 });
 
 const App = () =>
-  <div className={bg}>
-    Hello World!
-  </div>;
+    <div className={bg}>
+        Hello World!
+    </div>;
 
 ReactDOM.render(<App />, document.getElementById("root"));
